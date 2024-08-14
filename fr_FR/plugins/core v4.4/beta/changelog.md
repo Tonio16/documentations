@@ -2,15 +2,15 @@
 
 # 4.4.11
 
-- Possibilité de rendre les colonnes des tableaux redimmensionnable (seulement la liste des variables pour le moment ca sera étendu à d'autre table si besoin) [LIEN](https://github.com/jeedom/core/issues/2499)
+- Possibilité de rendre les colonnes des tableaux redimmensionnables (seulement la liste des variables pour le moment ça sera étendu à d'autres tables si besoin) [LIEN](https://github.com/jeedom/core/issues/2499)
 - Ajout d'une alerte si l'espace disque de jeedom est trop faible (la vérification se fait une fois par jour) [LIEN](https://github.com/jeedom/core/issues/2438)
-- Ajout d'un bouton sur la fenetre de configuration d'une commande au niveau du champ de calcul de valeur pour aller chercher une commande [LIEN](https://github.com/jeedom/core/issues/2776)
-- Possibilité de maquer certain menu pour les utilisateurs limités [LIEN](https://github.com/jeedom/core/issues/2651)
-- Les graphiques se mettent à jour automatiquement lors de l'arrivées de nouvelles valeur [LIEN](https://github.com/jeedom/core/issues/2749)
-- Jeedom ajoute automatiquement la hauteur de l'image lors de la création des widgets pour eviter les soucis de chevauchement en mobile [LIEN](https://github.com/jeedom/core/issues/2539)
+- Ajout d'un bouton sur la fenêtre de configuration d'une commande au niveau du champ de calcul de valeur pour aller chercher une commande [LIEN](https://github.com/jeedom/core/issues/2776)
+- Possibilité de masquer certains menus pour les utilisateurs limités [LIEN](https://github.com/jeedom/core/issues/2651)
+- Les graphiques se mettent à jour automatiquement lors de l'arrivée de nouvelles valeur [LIEN](https://github.com/jeedom/core/issues/2749)
+- Jeedom ajoute automatiquement la hauteur de l'image lors de la création des widgets pour éviter les soucis de chevauchement en mobile [LIEN](https://github.com/jeedom/core/issues/2539)
 - Refonte de la partie backup cloud [LIEN](https://github.com/jeedom/core/issues/2765)
 - **DEV** Mise en place d'un systeme de queue pour l'éxecution d'action [LIEN](https://github.com/jeedom/core/issues/2489)
-- Les tags des scénarios sont maintenant propre à l'instance du scénario (si vous avez deux lancement très proche de scénario les tags du derniers n'écrase plus le premier) [LIEN](https://github.com/jeedom/core/issues/2763)
+- Les tags des scénarios sont maintenant propre à l'instance du scénario (si vous avez deux lancements très proche de scénario les tags du derniers n'écrase plus le premier) [LIEN](https://github.com/jeedom/core/issues/2763)
 - Changement sur la partie trigger des scénarios : [LIEN](https://github.com/jeedom/core/issues/2414)
   - ``triggerId()`` est maintenant deprecated et sera retiré dans les futurs mises a jour du core
   - ``trigger()`` est maintenant deprecated et sera retiré dans les futurs mises a jour du core
@@ -25,12 +25,12 @@
   - ``#trigger_name#`` : Si c'est une commande qui a déclenché le scénario alors ce tag à la valeur du nom de la commande (sous forme [objet][equipement][commande])
   - ``#trigger_value#`` : Si c'est une commande qui a déclenché le scénario alors ce tag à la valeur de la commande ayant déclenché le scénario
 - Amélioration de la gestion des plugins sur github (plus de dépendances à une librairie tierce) [LIEN](https://github.com/jeedom/core/issues/2567)
-- Suppression de l'ancien systeme de cache. [LIEN](https://github.com/jeedom/core/pull/2799)
-- Possibilité de suppression les bloc DANS et A en attente d'un autre scénario [LIEN](https://github.com/jeedom/core/pull/2379)
+- Suppression de l'ancien système de cache. [LIEN](https://github.com/jeedom/core/pull/2799)
+- Possibilité de suppression les blocs DANS et A en attente d'un autre scénario [LIEN](https://github.com/jeedom/core/pull/2379)
 - Correction d'un bug dans Safari sur les filtres avec accents [LIEN](https://github.com/jeedom/core/pull/2754)
-- Correction d'un bug sur la generation des informations generic type dans les scénarios [LIEN](https://github.com/jeedom/core/pull/2806)
+- Correction d'un bug sur la génération des informations generic type dans les scénarios [LIEN](https://github.com/jeedom/core/pull/2806)
 - Ajout d'une confirmation lors de l'ouverture de l'accès support depuis la page de gestion des utilisateurs [LIEN](https://github.com/jeedom/core/pull/2809)
-- Ajout dans l'assistant de condition des scénarios des conditions supérieur ou égal et inferieur ou égal [LIEN](https://github.com/jeedom/core/issues/2810)
+- Ajout dans l'assistant de condition des scénarios des conditions supérieur ou égal et inférieur ou égal [LIEN](https://github.com/jeedom/core/issues/2810)
 - Possibilité d'exclure des commandes de l'analyse des commandes mortes [LIEN](https://github.com/jeedom/core/issues/2812)
 - Correction d'un bug sur la numérotation du nombre de ligne des tableaux [LIEN](https://github.com/jeedom/core/commit/0e9e44492e29f7d0842b2c9b3df39d0d98957c83)
 - Ajout d'openstreetmap.org dans les domaines externe autorisé par défaut [LIEN](https://github.com/jeedom/core/commit/2d62c64f0bd1958372844f6859ef691f88852422)
@@ -44,7 +44,7 @@
 
 >**IMPORTANT**
 >
-> Du au changement de moteur de cache sur cette mise à jour, tous le cache sera perdu, aucune inquietude c'est du cache il va se reconstituer de lui meme. Le cache contient entre autre les valeurs des commandes qui se remettront à jour automatiquement lorsque les modules remonteront leur valeur. A noter que si vous avez des virtuels à valeur fixe (ce qui n'est pas bien si ca ne change pas alors faut utiliser les variables) alors il vous faudra resauvegarder ceux-ci pour récuperer la valeur.
+> Du au changement de moteur de cache sur cette mise à jour, tout le cache sera perdu, aucune inquietude c'est du cache il va se reconstituer de lui meme. Le cache contient entre autre les valeurs des commandes qui se remettront à jour automatiquement lorsque les modules remonteront leur valeur. À noter que si vous avez des virtuels à valeur fixe (ce qui n'est pas bien si ca ne change pas alors faut utiliser les variables) alors il vous faudra resauvegarder ceux-ci pour récuperer la valeur.
 
 # 4.4.10
 
@@ -53,10 +53,10 @@
 - Le prix du plugin est masqué si vous l'avez deja acheté [LIEN](https://github.com/jeedom/core/pull/2746)
 - Sur la page de connexion possibilité d'afficher ou nom le mot de passe [LIEN](https://github.com/jeedom/core/pull/2740)
 - Correction d'un bug lorsqu'on quitte une page sans avoir sauvegardé [LIEN](https://github.com/jeedom/core/pull/2745)
-- Création (en beta) d'un nouveau systeme de cache [LIEN](https://github.com/jeedom/core/pull/2758) :
-  - Fichier : systeme identique a celui d'avant mais repris en interne pour eviter la dépendances a une lib tierce. Le plus performant mais sauvegardé toute les 30min
+- Création (en beta) d'un nouveau système de cache [LIEN](https://github.com/jeedom/core/pull/2758) :
+  - Fichier : système identique à celui d'avant mais repris en interne pour eviter la dépendances à une lib tierce. Le plus performant mais sauvegardé toutes les 30min
   - Mysql : utilisation d'une table de cache en base. Le moins performant mais sauvegardé en temps réel (aucune perte de données possible)
-  - Redis : réservé aux experts, s'appuie sur redis pour gerer le cache (necessite donc que vous installiez vous meme un redis et les dépendance php-redis)
+  - Redis : réservé aux experts, s'appuie sur redis pour gerer le cache (nécessite donc que vous installiez vous même un redis et les dépendance php-redis)
 - Correction d'un bug sur les alertes des équipements lors de la suppression de la commande en alerte [LIEN](https://github.com/jeedom/core/issues/2775)
 - Possibilité dans la configuration avancée d'un équipement de masquer celui-ci lors de l'affichage sur le dashboard de plusieurs objets [LIEN](https://github.com/jeedom/core/issues/2553)
 - Correction d'un bug sur l'affichage du dossier de timeline dans la configuration avancée d'une commande [LIEN](https://github.com/jeedom/core/issues/2791)
@@ -66,13 +66,13 @@
 - Correction d'un soucis lors du changement d'heure suite à la refonte de la gestion des crons [LIEN](https://github.com/jeedom/core/issues/2794)
 - Correction d'un bug sur la page de résumé domotique lors de la recherche d'une commande par id [LIEN](https://github.com/jeedom/core/issues/2795)
 - Ajout de la taille de la base de données sur la page de santé [LIEN](https://github.com/jeedom/core/commit/65fe37bb11a2e9f389669d935669abc33f54495c)
-- Jeedom liste maintenant toute les branches et tags du repos github pour permettre de tester des fonctionnalitées en avance ou de revenir à une version précdente du core (attention cela est trés risqué) [LIEN](https://github.com/jeedom/core/issues/2500)
+- Jeedom liste maintenant toute les branches et tags du repos github pour permettre de tester des fonctionnalitées en avance ou de revenir à une version précédente du core (attention cela est trés risqué) [LIEN](https://github.com/jeedom/core/issues/2500)
 - Amélioration des sous types de commandes supportées sur les génériques type [LIEN](https://github.com/jeedom/core/pull/2797)
-- Correction d'un bug sur l'affichage des scénario et les commentaires lorsqu'on veut les masquer [LIEN](https://github.com/jeedom/core/pull/2790)
+- Correction d'un bug sur l'affichage des scénarios et les commentaires lorsqu'on veut les masquer [LIEN](https://github.com/jeedom/core/pull/2790)
 - Correction d'un bug sur l'outils de remplacement (pas de commande dans le choix de remplacement) [LIEN](https://github.com/jeedom/core/issues/2818)
 - Amélioration du systeme de cron pour eviter quelque raté de lancement [LIEN](https://github.com/jeedom/core/commit/533d6d4d508ffe5815f7ba6355ec45497df73313)
-- Correction d'un bug autorisant d'avoir plusieurs fois le meme listener [LIEN](https://github.com/jeedom/core/issues/2820)
-- Correction d'un bug en PHP8 avec la mise à jour qui supprimé des fichiers utiles [LIEN](https://github.com/jeedom/core/issues/2822)
+- Correction d'un bug autorisant d'avoir plusieurs fois le même listener [LIEN](https://github.com/jeedom/core/issues/2820)
+- Correction d'un bug en PHP8 avec la mise à jour qui supprime des fichiers utiles [LIEN](https://github.com/jeedom/core/issues/2822)
 
 >**IMPORTANT**
 >
@@ -80,11 +80,11 @@
 
 >**IMPORTANT**
 >
-> Lors de la mise à jour il est possible que vous ayez une erreur de création d'indexe unique sur la table listener, rien de grave c'est du à des listener dupliqué et jeedom corrigera ca de lui meme au bout de 24h (l'indexe en lui meme pourra etre fait soit depuis la verification de la base de données dans la configuration de jeedom ou juste attendre les prochaines mises à jour).
+> Lors de la mise à jour il est possible que vous ayez une erreur de création d'indexe unique sur la table listener, rien de grave c'est du à des listener dupliqué et jeedom corrigera ça de lui même au bout de 24h (l'index en lui même pourra être fait soit depuis la verification de la base de données dans la configuration de jeedom ou juste attendre les prochaines mises à jour).
 
 >**IMPORTANT**
 >
->Pour tout ceux utilisant PHP8 il est impératif de cocher la case de "pre-update" avant de lancer la mise à jour de jeedom. Sans cette précaution, des fichiers ssentiels pourraitent être manquants, ce qui empêcherait le bon fonctionnement de Jeedom.
+>Pour tout ceux utilisant PHP8 il est impératif de cocher la case de "pre-update" avant de lancer la mise à jour de jeedom. Sans cette précaution, des fichiers essentiels pourraitent être manquants, ce qui empêcherait le bon fonctionnement de Jeedom.
 
 # 4.4.9
 
